@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Core.Util
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Core.Application", "src\core\HexagonalTemplate.Core.Application\HexagonalTemplate.Core.Application.csproj", "{0DC85A12-2995-47AF-A32D-23BEC8852155}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{90C2FF12-6703-40C5-BE91-0179EBB22F48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
