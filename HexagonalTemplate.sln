@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4435B130-0C94-4F36-BF42-99ACCA9A51CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{04D48269-B2C4-42F5-B80B-D9841E35F6D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexahonalTemplate.Core.Domain", "src\core\HexahonalTemplate.Core.Domain\HexahonalTemplate.Core.Domain.csproj", "{39B99D1F-4AF9-4C6D-BA8E-0C39F73181FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adapters", "adapters", "{F586AC5A-24F7-4151-95CD-0B4923A04EBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ports", "ports", "{07822FB6-012C-4987-9733-569FEAA10EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Ports.Worker", "src\ports\HexagonalTemplate.Ports.Worker\HexagonalTemplate.Ports.Worker.csproj", "{84051A70-495C-41AB-A386-AF823DFD123D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.PgSql", "src\adapters\Infrastructure.PgSql\Infrastructure.PgSql.csproj", "{6488F636-2406-4561-9125-5AC5EB388D2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39B99D1F-4AF9-4C6D-BA8E-0C39F73181FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B99D1F-4AF9-4C6D-BA8E-0C39F73181FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B99D1F-4AF9-4C6D-BA8E-0C39F73181FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B99D1F-4AF9-4C6D-BA8E-0C39F73181FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84051A70-495C-41AB-A386-AF823DFD123D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84051A70-495C-41AB-A386-AF823DFD123D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84051A70-495C-41AB-A386-AF823DFD123D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84051A70-495C-41AB-A386-AF823DFD123D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6488F636-2406-4561-9125-5AC5EB388D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6488F636-2406-4561-9125-5AC5EB388D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6488F636-2406-4561-9125-5AC5EB388D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6488F636-2406-4561-9125-5AC5EB388D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04D48269-B2C4-42F5-B80B-D9841E35F6D2} = {4435B130-0C94-4F36-BF42-99ACCA9A51CF}
+		{39B99D1F-4AF9-4C6D-BA8E-0C39F73181FC} = {04D48269-B2C4-42F5-B80B-D9841E35F6D2}
+		{F586AC5A-24F7-4151-95CD-0B4923A04EBE} = {4435B130-0C94-4F36-BF42-99ACCA9A51CF}
+		{07822FB6-012C-4987-9733-569FEAA10EBF} = {4435B130-0C94-4F36-BF42-99ACCA9A51CF}
+		{84051A70-495C-41AB-A386-AF823DFD123D} = {07822FB6-012C-4987-9733-569FEAA10EBF}
+		{6488F636-2406-4561-9125-5AC5EB388D2F} = {F586AC5A-24F7-4151-95CD-0B4923A04EBE}
+	EndGlobalSection
+EndGlobal
