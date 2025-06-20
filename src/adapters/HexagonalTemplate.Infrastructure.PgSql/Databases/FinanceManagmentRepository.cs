@@ -2,7 +2,7 @@ using System.Linq.Expressions;
 using HexagonalTemplate.Core.Application.Abstractions.Ports.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.PgSql.Databases;
+namespace HexagonalTemplate.Infrastructure.PgSql.Databases;
 
 public class FinanceManagmentRepository(DbContext dbContext): IFinanceManagementRepository
 {

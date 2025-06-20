@@ -8,13 +8,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Core.Doma
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adapters", "adapters", "{F586AC5A-24F7-4151-95CD-0B4923A04EBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.PgSql", "src\adapters\Infrastructure.PgSql\Infrastructure.PgSql.csproj", "{6488F636-2406-4561-9125-5AC5EB388D2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Infrastructure.PgSql", "src\adapters\HexagonalTemplate.Infrastructure.PgSql\HexagonalTemplate.Infrastructure.PgSql.csproj", "{6488F636-2406-4561-9125-5AC5EB388D2F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Core.Utils", "src\core\HexagonalTemplate.Core.Utils\HexagonalTemplate.Core.Utils.csproj", "{E2A813E8-B22E-4D58-B76A-ECC6F238ADCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Core.Application", "src\core\HexagonalTemplate.Core.Application\HexagonalTemplate.Core.Application.csproj", "{0DC85A12-2995-47AF-A32D-23BEC8852155}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{90C2FF12-6703-40C5-BE91-0179EBB22F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexagonalTemplate.Adapters.WebApi", "src\adapters\HexagonalTemplate.Adapters.WebApi\HexagonalTemplate.Adapters.WebApi.csproj", "{C4609FB2-00CA-4C3B-8212-8CA2F292EB22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{0DC85A12-2995-47AF-A32D-23BEC8852155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DC85A12-2995-47AF-A32D-23BEC8852155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DC85A12-2995-47AF-A32D-23BEC8852155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4609FB2-00CA-4C3B-8212-8CA2F292EB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4609FB2-00CA-4C3B-8212-8CA2F292EB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4609FB2-00CA-4C3B-8212-8CA2F292EB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4609FB2-00CA-4C3B-8212-8CA2F292EB22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{04D48269-B2C4-42F5-B80B-D9841E35F6D2} = {4435B130-0C94-4F36-BF42-99ACCA9A51CF}
@@ -46,5 +52,6 @@ Global
 		{6488F636-2406-4561-9125-5AC5EB388D2F} = {F586AC5A-24F7-4151-95CD-0B4923A04EBE}
 		{E2A813E8-B22E-4D58-B76A-ECC6F238ADCA} = {04D48269-B2C4-42F5-B80B-D9841E35F6D2}
 		{0DC85A12-2995-47AF-A32D-23BEC8852155} = {04D48269-B2C4-42F5-B80B-D9841E35F6D2}
+		{C4609FB2-00CA-4C3B-8212-8CA2F292EB22} = {F586AC5A-24F7-4151-95CD-0B4923A04EBE}
 	EndGlobalSection
 EndGlobal

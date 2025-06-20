@@ -1,11 +1,11 @@
 using HexagonalTemplate.Core.Application.Abstractions.Ports.Repositories;
-using Infrastructure.PgSql.Databases;
-using Infrastructure.PgSql.Databases.Contexts;
+using HexagonalTemplate.Infrastructure.PgSql.Databases;
+using HexagonalTemplate.Infrastructure.PgSql.Databases.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Infrastructure.PgSql;
+namespace HexagonalTemplate.Infrastructure.PgSql;
 
 public static class InfrastructurePgSqlLayerDependency
 {
