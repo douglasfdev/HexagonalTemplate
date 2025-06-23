@@ -16,8 +16,8 @@ public class FinanceManagmentRepository(DbContext dbContext): IFinanceManagement
     public async Task UpdateAsync<TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity : class
     {
         dbContext.Set<TEntity>().Update(entity);
-        await dbContext.SaveChangesAsync(cancellationToken);
 
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task UpdateAsync<TEntity, TProperty>(Expression<Func<TEntity, bool>> expression, TProperty property, CancellationToken cancellationToken) where TEntity : class
@@ -39,7 +39,7 @@ public class FinanceManagmentRepository(DbContext dbContext): IFinanceManagement
     }
 
     public async Task<TEntity?> GetAsync<TEntity>(Expression<Func<TEntity, bool>> expression, CancellationToken cancellationToken) where TEntity : class
-        => await dbContext.Set<TEntity>().FirstOrDefaultAsync(expression, cancellationToken);
+        => await dbContext.Set<TEntity>().AsSplitQuery().FirstOrDefaultAsync(expression, cancellationToken);
 
     public async Task<List<TEntity>> ListAsync<TEntity>(Expression<Func<TEntity, bool>> expression, CancellationToken cancellationToken) where TEntity : class
         => await dbContext.Set<TEntity>().Where(expression).ToListAsync(cancellationToken);

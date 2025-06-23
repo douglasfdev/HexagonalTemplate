@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Databases\Configurations\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.17" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.17">
         <PrivateAssets>all</PrivateAssets>
@@ -21,11 +17,20 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.1" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\core\HexagonalTemplate.Core.Application\HexagonalTemplate.Core.Application.csproj" />
+      <ProjectReference Include="..\..\core\HexagonalTemplate.Core.Domain\HexagonalTemplate.Core.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Configuration">
+        <HintPath>..\..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.15\Microsoft.Extensions.Configuration.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

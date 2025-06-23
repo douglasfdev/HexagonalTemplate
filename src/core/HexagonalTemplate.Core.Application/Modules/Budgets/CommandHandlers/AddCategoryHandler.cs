@@ -14,6 +14,8 @@ public class AddCategoryHandler(IFinanceManagementRepository financeManagementRe
         
         if (budget is null)
             throw new Exception("Budget not found");
+        
+        budget.AddCategory(command.Name, command.Limit);
 
         await financeManagementRepository.UpdateAsync(budget, cancellationToken);
     }

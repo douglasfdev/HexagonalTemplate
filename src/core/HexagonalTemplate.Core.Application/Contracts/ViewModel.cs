@@ -1,5 +1,3 @@
-using HexagonalTemplate.Core.Application.Dtos;
-
 namespace HexagonalTemplate.Core.Application.Contracts;
 
 public static class ViewModel
@@ -8,5 +6,11 @@ public static class ViewModel
 
     public record CategoryViewModel(Guid AccountId, string CategoryName, decimal CategoryLimit);
 
-    public record TransactionViewModel(TransactionViewModelDto TrasactionDto);
+    public record TransactionViewModel(
+        Guid AccountId,
+        string Category,
+        DateTime CreateAt,
+        string Description,
+        decimal Value
+    );
 }

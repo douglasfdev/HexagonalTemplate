@@ -1,12 +1,23 @@
 using HexagonalTemplate.Core.Domain.Abstractions.Entities;
+using HexagonalTemplate.Core.Domain.Modules.Accounts.Aggregates;
 
 namespace HexagonalTemplate.Core.Domain.Modules.Accounts.Entities;
 
-public class Profile(string firstName, string lastName, string email): Entity
+public class Profile : Entity
 {
-    public string FirstName { get; private set; } = firstName;
-    
-    public string LastName { get; private set; } = lastName;
-    
-    public string Email { get; private set; } = email;
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
+    public string Email { get; private set; }
+
+    protected Profile() { }
+
+    public Profile(string firstName, string lastName, string email)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+        Email = email;
+    }
+
+    public Guid AccountId { get; private set; }
+    public Account Account { get; private set; } = null!;
 }

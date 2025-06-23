@@ -1,4 +1,5 @@
 using HexagonalTemplate.Adapters.WebApi.Transformers;
+using HexagonalTemplate.Core.Application;
 using HexagonalTemplate.Infrastructure.PgSql;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
@@ -12,7 +13,9 @@ builder.Services.AddControllers(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddPgSqlLayer(builder.Configuration);
+builder.Services
+    .AddPgSqlLayer(builder.Configuration)
+    .AddApplicationLayer();
 
 var app = builder.Build();
 
