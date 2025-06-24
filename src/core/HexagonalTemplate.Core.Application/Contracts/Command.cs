@@ -1,5 +1,4 @@
 using HexagonalTemplate.Core.Application.Abstractions.Contracts;
-using HexagonalTemplate.Core.Application.Dtos;
 
 namespace HexagonalTemplate.Core.Application.Contracts;
 
