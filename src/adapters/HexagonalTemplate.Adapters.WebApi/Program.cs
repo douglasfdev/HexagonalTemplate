@@ -32,7 +32,7 @@ builder.Services
 
 var app = builder.Build();
 
-app.UseCors("AllowAll"); // Ou AllowAll
+app.UseCors("AllowAll"); // Ou AllowSpecificOrigin
 app.UseSwagger();
 app.UseSwaggerUI();
 
