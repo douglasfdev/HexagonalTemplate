@@ -30,7 +30,7 @@ namespace HexagonalTemplate.Infrastructure.PgSql.Databases.Migrations
                     migrationBuilder.Sql($@"
                 CREATE VIEW ""{nameof(ViewModel.CategoryViewModel)}"" AS
                     SELECT
-                        c.""BudgetId"" AS ""AccountId"",
+                        c.""BudgetId"" AS ""BudgetId"",
                         c.""Name"" AS ""CategoryName"",
                         c.""Limit"" AS ""CategoryLimit""
                     FROM

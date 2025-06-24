@@ -9,7 +9,7 @@ public class ListCategoryHandler(IFinanceManagementRepository financeManagementR
     public override async Task<List<ViewModel.CategoryViewModel>> Handle(Query.ListCategoryQuery query, CancellationToken cancellationToken)
     {
         var categories = await financeManagementRepository.ListAsync<ViewModel
-            .CategoryViewModel>(prop => prop.AccountId == query.AccountId, cancellationToken);
+            .CategoryViewModel>(prop => prop.BudgetId == query.BudgetId, cancellationToken);
         return categories;
     }
 }

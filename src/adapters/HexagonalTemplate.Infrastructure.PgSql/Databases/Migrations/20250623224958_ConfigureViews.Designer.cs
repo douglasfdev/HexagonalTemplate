@@ -43,7 +43,7 @@ namespace HexagonalTemplate.Infrastructure.PgSql.Databases.Migrations
 
             modelBuilder.Entity("HexagonalTemplate.Core.Application.Contracts.ViewModel+CategoryViewModel", b =>
                 {
-                    b.Property<Guid>("AccountId")
+                    b.Property<Guid>("BudgetId")
                         .HasColumnType("uuid");
 
                     b.Property<decimal>("CategoryLimit")

@@ -6,7 +6,7 @@ public static class Query
 {
     public record GetBalanceQuery(Guid AccountId) : IQuery;
 
-    public record ListCategoryQuery(Guid AccountId) : IQuery;
+    public record ListCategoryQuery(Guid BudgetId) : IQuery;
 
     public record ListExpenseByCategoryQuery(Guid AccountId, string Category) : IQuery;
 
