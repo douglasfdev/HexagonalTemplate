@@ -1,4 +1,5 @@
 using HexagonalTemplate.Core.Application.Abstractions.Contracts;
+using HexagonalTemplate.Core.Application.Dtos;
 
 namespace HexagonalTemplate.Core.Application.Contracts;
 
@@ -8,7 +9,7 @@ public static class Command
     
     public record AddCategoryCommand(Guid BudgetId, string Name, decimal Limit) : Message, ICommand;
 
-    public record InformAddressCommand(string Street, string City, string State, string ZepCode, string Country, int? Number, string? Complement) : Message, ICommand;
+    public record InformAddressCommand(string Street, string City, string State, string ZipCode, string Country, int? Number, string? Complement) : Message, ICommand;
 
     public record RegisterBudgetCommand(Guid AccountId, DateOnly ReferencePeriod, decimal TotalValue) : Message, ICommand;
 

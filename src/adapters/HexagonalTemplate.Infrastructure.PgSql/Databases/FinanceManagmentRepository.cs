@@ -9,8 +9,8 @@ public class FinanceManagmentRepository(DbContext dbContext): IFinanceManagement
     public async Task InsertAsync<TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity : class
     {
         await dbContext.Set<TEntity>().AddAsync(entity, cancellationToken);
-        await dbContext.SaveChangesAsync(cancellationToken);
 
+        await dbContext.SaveChangesAsync(cancellationToken);
     }
 
     public async Task UpdateAsync<TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity : class
