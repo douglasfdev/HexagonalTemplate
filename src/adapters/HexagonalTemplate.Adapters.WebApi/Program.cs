@@ -13,12 +13,26 @@ builder.Services.AddControllers(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("https://localhost:7200")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
+    options.AddPolicy("AllowAll",
+        builder => builder.AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+
+});
 builder.Services
     .AddPgSqlLayer(builder.Configuration)
     .AddApplicationLayer();
 
 var app = builder.Build();
 
+app.UseCors("AllowAll"); // Ou AllowAll
 app.UseSwagger();
 app.UseSwaggerUI();
 
