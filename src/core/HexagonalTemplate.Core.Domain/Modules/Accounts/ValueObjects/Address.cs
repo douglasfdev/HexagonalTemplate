@@ -1,5 +1,3 @@
-using HexagonalTemplate.Core.Utils.Guard;
-
 namespace HexagonalTemplate.Core.Domain.Modules.Accounts.ValueObjects;
 
 public record Address(
