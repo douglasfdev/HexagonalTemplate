@@ -35,17 +35,17 @@ public class AccountTests
     
     [Theory]
     [InlineData("Rua A", "Cidade B", "Estado C", "12345-678", "Brasil", 123, "Apto 1")]
-    public void InformAddress_Should_Define_Address_Correctly(string street, string city, string state, string zepCode, string country, int? number, string? complement)
+    public void InformAddress_Should_Define_Address_Correctly(string street, string city, string state, string zipCode, string country, int? number, string? complement)
     {
         var account = new Account();
 
-        account.InformAddress(street, city, state, zepCode, country, number, complement);
+        account.InformAddress(street, city, state, zipCode, country, number, complement);
 
         Assert.NotNull(account.Address);
         Assert.Equal(street, account.Address.Street);
         Assert.Equal(city, account.Address.City);
         Assert.Equal(state, account.Address.State);
-        Assert.Equal(zepCode, account.Address.ZepCode);
+        Assert.Equal(zipCode, account.Address.ZipCode);
         Assert.Equal(country, account.Address.Country);
         Assert.Equal(number, account.Address.Number);
         Assert.Equal(complement, account.Address.Complement);
@@ -57,13 +57,13 @@ public class AccountTests
     [InlineData("Rua", "Cidade", "", "12345-678", "Brasil", 100, null)]
     [InlineData("Rua", "Cidade", "Estado", "", "Brasil", 100, null)]
     [InlineData("Rua", "Cidade", "Estado", "12345-678", "", 100, null)]
-    public void InformAddress_Should_Throw_When_Arguments_Are_Invalid(string street, string city, string state, string zepCode, string country, int? number, string? complement)
+    public void InformAddress_Should_Throw_When_Arguments_Are_Invalid(string street, string city, string state, string zipCode, string country, int? number, string? complement)
     {
         var account = new Account();
 
         Assert.Throws<ArgumentException>(() =>
         {
-            account.InformAddress(street, city, state, zepCode, country, number, complement);
+            account.InformAddress(street, city, state, zipCode, country, number, complement);
         });
     }
 }

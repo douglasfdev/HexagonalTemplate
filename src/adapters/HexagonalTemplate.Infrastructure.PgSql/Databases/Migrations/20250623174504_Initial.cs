@@ -48,7 +48,7 @@ namespace HexagonalTemplate.Infrastructure.PgSql.Databases.Migrations
                     Street = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: false),
                     City = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: false),
                     State = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: false),
-                    ZepCode = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: false),
+                    ZipCode = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: false),
                     Country = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: false),
                     Number = table.Column<int>(type: "integer", nullable: true),
                     Complement = table.Column<string>(type: "character varying(1024)", unicode: false, maxLength: 1024, nullable: true),

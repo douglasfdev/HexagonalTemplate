@@ -208,7 +208,7 @@ namespace HexagonalTemplate.Infrastructure.PgSql.Databases.Migrations
                                 .IsUnicode(false)
                                 .HasColumnType("character varying(1024)");
 
-                            b1.Property<string>("ZepCode")
+                            b1.Property<string>("ZipCode")
                                 .IsRequired()
                                 .HasMaxLength(1024)
                                 .IsUnicode(false)
