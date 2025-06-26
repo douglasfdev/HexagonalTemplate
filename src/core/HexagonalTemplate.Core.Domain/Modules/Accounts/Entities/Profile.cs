@@ -1,5 +1,6 @@
 using HexagonalTemplate.Core.Domain.Abstractions.Entities;
 using HexagonalTemplate.Core.Domain.Modules.Accounts.Aggregates;
+using HexagonalTemplate.Core.Utils.Guard;
 
 namespace HexagonalTemplate.Core.Domain.Modules.Accounts.Entities;
 
@@ -13,6 +14,10 @@ public class Profile : Entity
 
     public Profile(string firstName, string lastName, string email)
     {
+        ArgumentGuard.AgainstNullOrWhiteSpace(firstName, nameof(firstName));
+        ArgumentGuard.AgainstNullOrWhiteSpace(lastName, nameof(lastName));
+        ArgumentGuard.AgainstNullOrWhiteSpace(email, nameof(email));
+        
         FirstName = firstName;
         LastName = lastName;
         Email = email;
