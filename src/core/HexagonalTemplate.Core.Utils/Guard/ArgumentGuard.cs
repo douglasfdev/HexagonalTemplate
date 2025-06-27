@@ -13,4 +13,10 @@ public static class ArgumentGuard
         if (value == null || value < 0)
             throw new ArgumentException($"O argumento '{paramName}' não pode ser nulo ou negativo.");
     }
+    
+    public static void AgainstNullOrNegative(decimal? value, string paramName)
+    {
+        if (value == null || value < 0)
+            throw new ArgumentException($"O argumento '{paramName}' não pode ser nulo ou negativo.");
+    }
 }
