@@ -12,24 +12,40 @@ public static class InfrastructurePgSqlLayerDependency
 {
     public static IServiceCollection AddPgSqlLayer(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<DbContext, FinanceManagementContext>((provider, builder) =>
+        services.AddDbContext<FinanceManagementContext>((builder) =>
         {
             builder
                 .EnableDetailedErrors()
                 .EnableSensitiveDataLogging()
                 .UseNpgsql(
-                    connectionString: configuration.GetConnectionString("FinanceManagmentDB"),
+                    connectionString: configuration.GetConnectionString("FinanceManagmentDBWrite"),
                     npgsqlOptionsAction: options
                         => options.MigrationsAssembly(typeof(FinanceManagementContext).Assembly.GetName().Name)
                 )
                 .ConfigureWarnings(warning =>
                     warning.Default(WarningBehavior.Throw)
                         .Log(CoreEventId.SensitiveDataLoggingEnabledWarning)
-                );;
+                );
+        });
+
+        services.AddDbContext<FinanceManagementReadContext>((builder) =>
+        {
+            builder
+                .EnableDetailedErrors()
+                .EnableSensitiveDataLogging()
+                .UseNpgsql(
+                    configuration.GetConnectionString("FinanceManagmentDBRead"),
+                    options => options.MigrationsAssembly(typeof(FinanceManagementContext).Assembly.GetName().Name)
+                )
+                .ConfigureWarnings(warning =>
+                    warning.Default(WarningBehavior.Throw)
+                        .Log(CoreEventId.SensitiveDataLoggingEnabledWarning)
+                );
         });
 
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         services.AddScoped<IFinanceManagementRepository, FinanceManagmentRepository>();
+        services.AddScoped<IFinanceManagementReadRepository, FinanceManagmentReadRepository>();
 
         return services;
     }
